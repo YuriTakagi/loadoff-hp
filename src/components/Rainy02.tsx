@@ -1,7 +1,7 @@
 import { useMemo, useRef, useEffect } from "react";
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import { Physics, usePlane, useBox } from "@react-three/cannon";
-import { Color, InstancedMesh, Mesh } from "three";
+import { Color, type InstancedMesh, type Mesh } from "three";
 import { OrbitControls } from "@react-three/drei";
 import styles from "./Rainy02.module.css";
 
@@ -94,13 +94,6 @@ const Scene = ({
 	//   return new Color(1, 1, 1);
 	// };
 
-	const { scene } = useThree();
-
-	useEffect(() => {
-		// scene.background = new Color(parseRGB(canvasColor));
-		scene.background = new Color(canvasColor);
-	}, [canvasColor, scene]);
-
 	return (
 		<group position={[0, -2, 0]}>
 			<ambientLight intensity={1} />
@@ -134,13 +127,14 @@ const Rainy02 = () => {
 			color.set(COLORS[Math.floor(Math.random() * 6)]).toArray(array, i * 3);
 		}
 		return array;
-	}, [number]);
+	}, []);
 
 	return (
 		<div className={styles.canvasDiv}>
 			<Canvas
 				className={styles.canvasContainer}
 				camera={{ fov: 50, position: [0, 3, 6] }}
+				style={{ backgroundColor: canvasColor }}
 				shadows
 			>
 				<Scene

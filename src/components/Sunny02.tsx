@@ -1,7 +1,7 @@
 import { useMemo, useRef, useEffect } from "react";
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import { Physics, usePlane, useBox } from "@react-three/cannon";
-import { Color, InstancedMesh, Mesh } from "three";
+import { Color, type InstancedMesh, type Mesh } from "three";
 import { OrbitControls } from "@react-three/drei";
 import styles from "./Sunny02.module.css";
 
@@ -78,12 +78,10 @@ const Scene = ({
 	colors,
 	number,
 	size,
-	canvasColor,
 }: {
 	colors: Float32Array;
 	number: number;
 	size: number;
-	canvasColor: string;
 }) => {
 	// const parseRGB = (rgb: string) => {
 	//   const result = rgb.match(/\d+/g);
@@ -93,13 +91,6 @@ const Scene = ({
 	//   }
 	//   return new Color(1, 1, 1);
 	// };
-
-	const { scene } = useThree();
-
-	useEffect(() => {
-		// scene.background = new Color(parseRGB(canvasColor));
-		scene.background = new Color(canvasColor);
-	}, [canvasColor, scene]);
 
 	return (
 		<group position={[0, -2, 0]}>
@@ -134,21 +125,17 @@ const Sunny02 = () => {
 			color.set(COLORS[Math.floor(Math.random() * 6)]).toArray(array, i * 3);
 		}
 		return array;
-	}, [number]);
+	}, []);
 
 	return (
 		<div className={styles.canvasDiv}>
 			<Canvas
 				className={styles.canvasContainer}
 				camera={{ fov: 50, position: [0, 3, 6] }}
+				style={{ backgroundColor: canvasColor }}
 				shadows
 			>
-				<Scene
-					colors={colors}
-					number={number}
-					size={size}
-					canvasColor={canvasColor}
-				/>
+				<Scene colors={colors} number={number} size={size} />
 				<OrbitControls
 					maxPolarAngle={Math.PI / 2}
 					minDistance={5}

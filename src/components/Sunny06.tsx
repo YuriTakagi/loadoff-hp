@@ -105,7 +105,7 @@ function InstancedRoundedBoxes({
 			mesh.instanceMatrix.needsUpdate = true;
 			geometry.setAttribute("color", new InstancedBufferAttribute(colors, 3));
 		}
-	}, [number, colors, geometry]);
+	}, [number, colors, geometry, ref.current]);
 
 	return (
 		<instancedMesh
@@ -140,14 +140,14 @@ const Sunny06 = () => {
 			color.set(COLORS[Math.floor(Math.random() * 6)]).toArray(array, i * 3);
 		}
 		return array;
-	}, [number]);
+	}, []);
 
 	return (
 		<div className={styles.canvasDiv}>
 			<Canvas
 				camera={{ fov: 50, position: [0, 3, 6] }}
 				shadows
-				onCreated={({ scene }) => (scene.background = new Color(canvasColor))}
+				style={{ backgroundColor: canvasColor }}
 			>
 				<group position={[0, -2, 0]}>
 					<ambientLight intensity={1} />

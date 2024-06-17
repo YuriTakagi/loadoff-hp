@@ -9,7 +9,7 @@ preview:
 	bunx --bun astro preview
 # フォーマット
 format:
-	bunx @biomejs/biome format --write .
+	bunx @biomejs/biome format --write ./src
 # リント
 lint:
-	bunx @biomejs/biome lint .
+	bunx @biomejs/biome lint  --write ./src

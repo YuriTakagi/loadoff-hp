@@ -130,7 +130,7 @@ const Sunny01 = () => {
 				<OrbitControls
 					maxPolarAngle={Math.PI / 2}
 					minDistance={1}
-					maxDistance={15}
+					maxDistance={8}
 				/>
 			</Canvas>
 		</div>

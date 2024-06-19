@@ -83,7 +83,7 @@ function InstancedRoundedBoxes({
 		useRef<InstancedMesh>(null),
 	);
 
-	const geometry = createRoundedBoxGeometry(size, size, size, 0.05, 10);
+	const geometry = createRoundedBoxGeometry(size, size, size, 0.01, 5);
 
 	useFrame(() =>
 		at(Math.floor(Math.random() * number)).position.set(
@@ -166,8 +166,8 @@ const Rainy04 = () => {
 				</group>
 				<OrbitControls
 					maxPolarAngle={Math.PI / 2}
-					minDistance={5}
-					maxDistance={15}
+					minDistance={1}
+					maxDistance={8}
 				/>
 			</Canvas>
 		</div>

@@ -145,8 +145,8 @@ const Rainy02 = () => {
 				/>
 				<OrbitControls
 					maxPolarAngle={Math.PI / 2}
-					minDistance={5}
-					maxDistance={15}
+					minDistance={1}
+					maxDistance={8}
 				/>
 			</Canvas>
 		</div>

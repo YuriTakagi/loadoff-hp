@@ -141,6 +141,7 @@ const Sunny04 = () => {
 		}
 		return array;
 	}, []);
+  console.log("painted")
 
 	return (
 		<div className={styles.canvasDiv}>

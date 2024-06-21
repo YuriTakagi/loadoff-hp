@@ -1,11 +1,11 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import Sunny04Component from "../components/Sunny04";
-import Counter from "../components/Counter";
-import UseRefCounter from "../components/UseRefCounter";
+import Layout from "../../layouts/Layout.astro";
+import Sunny04Component from "../../components/Sunny04";
+import Counter from "../../components/Counter";
+import UseRefCounter from "../../components/UseRefCounter";
 ---
 
-<Layout title="株式会社loadoff">
+<Layout title="Company|株式会社loadoff">
   <main>
     <div class="container">
       <!-- <Sunny04Component client:only="react" transition:name="sunny" transition:persist/> -->
@@ -20,14 +20,11 @@ import UseRefCounter from "../components/UseRefCounter";
           </ul>
         </nav>
       </div>
-      <div class="content1">
-        <h1>コンテンツ1</h1>
+      <div class="content3">
+        <h1>コンテンツ3</h1>
         <UseRefCounter client:only="react" transition:name="useRefCounter" transition:persist />
-      </div>
+        </div>
       <Counter client:only="react" transition:name="counter" transition:persist/>
-      <div class="content2">
-        <h1>コンテンツ2</h1>
-      </div>
     </div>
   </main>
 </Layout>
@@ -73,16 +70,11 @@ import UseRefCounter from "../components/UseRefCounter";
     justify-content: end;
     gap: 1.5rem;
   }
-  .content1, .content2 {
+  .content3 {
     height: 50rem;
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  .content1 {
-    background-color: lemonchiffon;
-  }
-  .content2 {
-    background-color: bisque;
+    background-color: lightskyblue;
   }
 </style>

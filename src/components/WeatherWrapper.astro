@@ -1,0 +1,19 @@
+---
+import BoxTitle from "./BoxTitle.astro";
+import CurrentTime from "./CurrentTime";
+import Location from "./Location.astro";
+import SunshineGraph from "./SunshineGraph";
+import TemperatureMeter from "./TemperatureMeter.astro";
+import WeatherMark from "./WeatherMark.astro";
+
+const { weatherInfo } = Astro.props;
+---
+
+<section>
+  <CurrentTime client:only="react"/>
+  <Location />
+  <BoxTitle />
+  <TemperatureMeter weatherInfo={weatherInfo}/>
+  <WeatherMark weatherInfo={weatherInfo}/>
+  <SunshineGraph weatherInfo={weatherInfo} client:only="react"/>
+</section>

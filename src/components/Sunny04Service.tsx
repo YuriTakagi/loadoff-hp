@@ -1,6 +1,6 @@
 import type { PlaneProps, Triplet } from "@react-three/cannon";
 import { Physics, useBox, usePlane } from "@react-three/cannon";
-import { Canvas, useFrame } from "@react-three/fiber";
+import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import { useEffect, useMemo, useRef } from "react";
 import type { InstancedMesh, Mesh } from "three";
 import {
@@ -11,7 +11,7 @@ import {
   InstancedBufferAttribute,
 } from "three";
 import { OrbitControls } from "@react-three/drei";
-import styles from "./Cloudy02.module.css";
+import styles from "./Sunny04.module.css";
 
 const Plane = (props: PlaneProps) => {
   const [ref] = usePlane(() => ({ ...props }), useRef<Mesh>(null));
@@ -68,11 +68,11 @@ function createRoundedBoxGeometry(
   return geometry;
 }
 
-function InstancedRoundedBoxes({
+const InstancedRoundedBoxes = ({
   colors,
   number,
   size,
-}: InstancedGeometryProps) {
+}: InstancedGeometryProps) => {
   const args: Triplet = [size, size, size];
   const [ref, { at }] = useBox(
     () => ({
@@ -83,7 +83,7 @@ function InstancedRoundedBoxes({
     useRef<InstancedMesh>(null),
   );
 
-  const geometry = createRoundedBoxGeometry(size, size, size, 0.05, 10);
+  const geometry = createRoundedBoxGeometry(size, size, size, 0.01, 5);
 
   useFrame(() =>
     at(Math.floor(Math.random() * number)).position.set(
@@ -117,18 +117,18 @@ function InstancedRoundedBoxes({
       <meshPhysicalMaterial vertexColors />
     </instancedMesh>
   );
-}
+};
 
 const COLORS = [
-  "rgb(218, 219, 222)",
-  "rgb(163, 158, 162)",
-  "rgb(103, 116, 120)",
-  "rgb(194, 194, 186)",
-  "rgb(87, 85, 84)",
-  "rgb(65, 61, 60)",
+  "rgb(224, 217, 206)",
+  "rgb(227, 190, 178)",
+  "rgb(124, 150, 102)",
+  "rgb(173, 195, 203)",
+  "rgb(229, 201, 111)",
+  "rgb(221, 77, 49)",
 ] as const;
 
-const Cloudy02 = () => {
+const Sunny04 = () => {
   const number = 150;
   const size = 0.2;
   const canvasColor = "rgb(239, 239, 239)";
@@ -166,7 +166,7 @@ const Cloudy02 = () => {
         </group>
         <OrbitControls
           maxPolarAngle={Math.PI / 2}
-          minDistance={5}
+          minDistance={1}
           maxDistance={15}
         />
       </Canvas>
@@ -174,4 +174,4 @@ const Cloudy02 = () => {
   );
 };
 
-export default Cloudy02;
+export default Sunny04;

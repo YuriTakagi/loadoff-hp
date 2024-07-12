@@ -13,6 +13,7 @@
     "@astrojs/check": "0.8.0",
     "@astrojs/cloudflare": "^11.0.1",
     "@astrojs/react": "3.6.0",
+    "@fontsource/be-vietnam-pro": "^5.0.20",
     "@react-three/cannon": "^6.6.0",
     "@react-three/drei": "^9.106.0",
     "@react-three/fiber": "^8.16.8",

@@ -7,7 +7,7 @@ import WeatherWrapper from "../components/WeatherWrapper.astro";
 import { getWeather } from "@api/getWeather";
 
 const weatherInfo = await getWeather();
-console.log(weatherInfo);
+console.log("weather data fetched");
 ---
 
 <Layout title="株式会社loadoff">

@@ -7,7 +7,15 @@ const currentWeather = WMO_WEATHER_CODES.find(
 );
 ---
 
-<div>
+<div class="weather-mark">
   <img src={currentWeather?.image} alt="天気マーク">
   <p>{currentWeather?.description}</p>
 </div>
+
+<style>
+  .weather-mark {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+</style>

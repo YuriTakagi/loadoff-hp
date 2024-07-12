@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
 
 const useCurrentTime = () => {
-  const [time, setTime] = useState<string>(new Date().toLocaleTimeString());
+  const [time, setTime] = useState<Date>(new Date());
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setTime(new Date().toLocaleTimeString());
+      setTime(new Date());
     }, 1000);
 
     return () => clearInterval(timer);

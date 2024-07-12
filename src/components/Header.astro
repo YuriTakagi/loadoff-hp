@@ -1,0 +1,53 @@
+---
+// TODO: Astro.urlで現在いるページのリンクに下線を引く
+---
+
+<header>
+  <nav>
+    <ul>
+      <li>
+        <a href="/"><img src="/loadoff.svg" alt=""></a>
+      </li>
+      <li>
+        <a href="/about">about</a>
+      </li>
+      <li>
+        <a href="/service">service</a>
+      </li>
+      <li>
+        <a href="/contact">contact</a>
+      </li>
+      <li>
+        <a href="https://x.com/LoadoffI" target="_blank" rel="noopener noreferrer"><img src="/x.svg" alt=""></a>
+      </li>
+      <li>
+        <a href="https://www.instagram.com/loadoffinc?igsh=MXVpeGpoZ2tuNjhrNA==" target="_blank" rel="noopener noreferrer"><img src="/instagram.svg" alt=""></a>
+      </li>
+      <li class="recruit">
+        <a href="/recruit">recruit</a>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+
+<style>
+  header {
+    padding: 3.75rem;
+  }
+  ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+  }
+  a {
+    text-decoration: none;
+    color: #444;
+    font-size: 1.125rem;
+  }
+  .recruit {
+    border: 0.0625rem solid #545454;
+    border-radius: 2rem;
+    padding: 0.5rem 3.125rem;
+  }
+</style>

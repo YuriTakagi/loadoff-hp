@@ -1,0 +1,33 @@
+<!-- <svg id="_レイヤー_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 364.49 124.87"><defs><clipPath id="clippath"><rect width="364.49" height="124.87" style="fill:none; stroke-width:0px;"/></clipPath><radialGradient id="_名称未設定グラデーション" cx="40.7" cy="271.48" fx="40.7" fy="271.48" r="1" gradientTransform="translate(-5309.22 38111.76) scale(134.94 -140.15)" gradientUnits="userSpaceOnUse"><stop offset=".28" stop-color="#fff"/><stop offset=".31" stop-color="#fff"/><stop offset=".44" stop-color="#fff"/><stop offset=".76" stop-color="#666"/><stop offset=".9" stop-color="#666"/></radialGradient></defs><g style="clip-path:url(#clippath);"><path d="M1,123.87c5.76-1.19,21.54-1.23,46.33-18.35,23.44-16.18,39.96-43.05,67.22-68.96,15.45-14.68,33.47-29.66,67.69-29.66,34.23,0,52.24,14.98,67.69,29.66,27.26,25.91,43.78,52.78,67.22,68.96,24.79,17.11,40.57,17.16,46.33,18.35" style="fill:none; stroke:url(#_名称未設定グラデーション); stroke-linecap:round; stroke-linejoin:round; stroke-width:2px;"/><path d="M1,69.01h362.49" style="fill:none; isolation:isolate; opacity:.9; stroke:#545454; stroke-linecap:round; stroke-linejoin:round;"/><g style="opacity:.9;"><path d="M31.91,37.53v2.74M31.91,16.83v2.74M27.42,36.33l-1.37,2.37M27.42,20.77l-1.37-2.37M21.76,34.41l2.37-1.37M24.13,24.06l-2.37-1.37M22.93,28.55h-2.74" style="fill:none; stroke:#545454; stroke-linecap:round; stroke-linejoin:round;"/><path d="M31.91,22.4c-3.4,0-6.15,2.76-6.15,6.15s2.76,6.15,6.15,6.15" style="fill:none; stroke:#545454; stroke-miterlimit:10;"/><path d="M38.39,22.63v13.46" style="fill:none; stroke:#545454; stroke-linecap:round; stroke-miterlimit:10;"/><path d="M35.02,24.82l3.01-3.01.41-.41c.2.2.41.41.41.41l3,3.01" style="fill:none; stroke:#545454; stroke-linecap:round; stroke-linejoin:round;"/></g><g style="opacity:.9;"><path d="M286.51,37.38v2.74M286.51,16.68v2.74M282.02,36.17l-1.37,2.37M282.02,20.62l-1.37-2.37M276.36,34.25l2.37-1.37M278.73,23.91l-2.37-1.37M277.53,28.4h-2.74" style="fill:none; stroke:#545454; stroke-linecap:round; stroke-linejoin:round;"/><path d="M286.51,22.24c-3.4,0-6.15,2.76-6.15,6.15s2.76,6.15,6.15,6.15" style="fill:none; stroke:#545454; stroke-miterlimit:10;"/><path d="M293.07,34.7v-13.46" style="fill:none; stroke:#545454; stroke-linecap:round; stroke-miterlimit:10;"/><path d="M296.44,32.51l-3.01,3.01-.41.41c-.2-.2-.41-.41-.41-.41l-3.01-3" style="fill:none; stroke:#545454; stroke-linecap:round; stroke-linejoin:round;"/></g></g></svg> -->
+
+<svg id="_レイヤー_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 364.49 124.87">
+  <defs>
+    <clipPath id="clippath">
+      <rect width="364.49" height="124.87" style="fill:none; stroke-width:0px;" />
+    </clipPath>
+    <radialGradient id="paint0_radial_201_54" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(182.25 56.3189) rotate(180) scale(134.01 159.472)">
+      <stop offset="0.28" stop-color="white"/>
+      <stop offset="0.31" stop-color="white"/>
+      <stop offset="0.44" stop-color="white"/>
+      <stop offset="0.76" stop-color="#666666"/>
+      <stop offset="0.9" stop-color="#666666"/>
+    </radialGradient>
+  </defs>
+  <g style="clip-path:url(#clippath);">
+    <path d="M1 110.81C15.45 111.3 20.72 111.05 30.42 108.78C38.37 106.93 46 103.13 56.02 94.98C72.66 81.44 76.44 71.72 92.87 52.42C100.5 43.45 112.06 29.86 127.39 18.61C138.34 10.58 155.93 1 182.24 1C208.56 1 226.15 10.58 237.1 18.61C252.42 29.85 263.99 43.44 271.62 52.42C288.05 71.73 291.83 81.45 308.47 94.98C318.49 103.13 326.12 106.93 334.07 108.78C343.78 111.04 348.64 111.3 363.49 110.81" 
+    style="fill:none; stroke:url(#paint0_radial_201_54); stroke-linecap:round; stroke-linejoin:round; stroke-width:2px;" />
+    <path d="M1,69.01h362.49" style="fill:none; isolation:isolate; opacity:.9; stroke:#545454; stroke-linecap:round; stroke-linejoin:round;" />
+    <g style="opacity:.9;">
+      <path d="M31.91,37.53v2.74M31.91,16.83v2.74M27.42,36.33l-1.37,2.37M27.42,20.77l-1.37-2.37M21.76,34.41l2.37-1.37M24.13,24.06l-2.37-1.37M22.93,28.55h-2.74" style="fill:none; stroke:#545454; stroke-linecap:round; stroke-linejoin:round;" />
+      <path d="M31.91,22.4c-3.4,0-6.15,2.76-6.15,6.15s2.76,6.15,6.15,6.15" style="fill:none; stroke:#545454; stroke-miterlimit:10;" />
+      <path d="M38.39,22.63v13.46" style="fill:none; stroke:#545454; stroke-linecap:round; stroke-miterlimit:10;" />
+      <path d="M35.02,24.82l3.01-3.01.41-.41c.2.2.41.41.41.41l3,3.01" style="fill:none; stroke:#545454; stroke-linecap:round; stroke-linejoin:round;" />
+    </g>
+    <g style="opacity:.9;">
+      <path d="M286.51,37.38v2.74M286.51,16.68v2.74M282.02,36.17l-1.37,2.37M282.02,20.62l-1.37-2.37M276.36,34.25l2.37-1.37M278.73,23.91l-2.37-1.37M277.53,28.4h-2.74" style="fill:none; stroke:#545454; stroke-linecap:round; stroke-linejoin:round;" />
+      <path d="M286.51,22.24c-3.4,0-6.15,2.76-6.15,6.15s2.76,6.15,6.15,6.15" style="fill:none; stroke:#545454; stroke-miterlimit:10;" />
+      <path d="M293.07,34.7v-13.46" style="fill:none; stroke:#545454; stroke-linecap:round; stroke-miterlimit:10;" />
+      <path d="M296.44,32.51l-3.01,3.01-.41.41c-.2-.2-.41-.41-.41-.41l-3.01-3" style="fill:none; stroke:#545454; stroke-linecap:round; stroke-linejoin:round;" />
+    </g>
+  </g>
+</svg>

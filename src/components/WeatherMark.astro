@@ -1,0 +1,21 @@
+---
+import { WMO_WEATHER_CODES } from "@constants/wmo-weather-codes";
+const { weatherInfo } = Astro.props;
+const currentWeatherCode = weatherInfo?.current_weather.weathercode;
+const currentWeather = WMO_WEATHER_CODES.find(
+  (item) => item.code === currentWeatherCode,
+);
+---
+
+<div class="weather-mark">
+  <img src={currentWeather?.image} alt="天気マーク">
+  <p>{currentWeather?.description}</p>
+</div>
+
+<style>
+  .weather-mark {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+</style>

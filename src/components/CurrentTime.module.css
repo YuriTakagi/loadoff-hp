@@ -1,0 +1,17 @@
+.clock {
+  text-align: center;
+}
+
+.time {
+  font-size: 5.625rem;
+  font-weight: 200;
+}
+
+.date {
+  letter-spacing: 0.01875rem;
+}
+
+.today {
+  font-size: 0.9375rem;
+  margin-right: 1rem;
+}

@@ -27,72 +27,73 @@ function calculateTemperatureRatio(
 }
 ---
 
-<div class="current-temperature">
-  {Math.round(weatherInfo.current_weather.temperature)}℃
-</div>
-<div class="wrapper">
-  <svg
-  id="meter-svg"
-  xmlns="http://www.w3.org/2000/svg"
-  width="91"
-  height="71"
-  viewBox="0 0 91 71"
-  fill="none"
-  class="meter"
-  >
-  <title>Temperature meter</title>
-  <g clip-path="url(#clip0_201_30)">
-    {paths.map((path) => (
-      <path
-        d={
-          [
-            "M1.63589 69.3565H18.5184",
-            "M3.02097 55.288L19.5436 58.8161",
-            "M7.28525 41.8111L22.7173 48.7139",
-            "M14.2542 29.5286L27.9085 39.4992",
-            "M23.6007 18.9662L34.8993 31.5665",
-            "M34.943 10.5843L43.3842 25.2773",
-            "M47.7575 4.75525L52.9815 20.8836",
-            "M61.5101 1.73117L63.2768 18.6046",
-            "M75.5789 1.64352L73.823 18.517",
-            "M89.3641 4.50323L84.151 20.6316",
-          ][path.id]
-        }
-        stroke={tempRatio >= path.ratio ? "#545454" : path.color}
-        stroke-width="3"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      />
-    ))}
-  </g>
-  <defs>
-    <clipPath id="clip0_201_30">
-      <rect width="91" height="71" fill="white" />
-    </clipPath>
-  </defs>
-  </svg>
-  <div>
-    <div class="max-temp">{Math.round(weatherInfo?.daily.temperature_2m_max[0])}℃</div>
+<div>
+  <div class="current-temperature">
+    {Math.round(weatherInfo.current_weather.temperature)}℃
+  </div>
+  <div class="wrapper">
     <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="18"
-      viewBox="0 0 24 18"
-      fill="none"
+    id="meter-svg"
+    xmlns="http://www.w3.org/2000/svg"
+    width="91"
+    height="71"
+    viewBox="0 0 91 71"
+    fill="none"
+    class="meter"
     >
-      <title>日照時間</title>
-      <path
-        opacity="0.9"
-        d="M0.509521 16.5392L23.2913 0.587219"
-        stroke="#444444"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      />
+    <title>Temperature meter</title>
+    <g clip-path="url(#clip0_201_30)">
+      {paths.map((path) => (
+        <path
+          d={
+            [
+              "M1.63589 69.3565H18.5184",
+              "M3.02097 55.288L19.5436 58.8161",
+              "M7.28525 41.8111L22.7173 48.7139",
+              "M14.2542 29.5286L27.9085 39.4992",
+              "M23.6007 18.9662L34.8993 31.5665",
+              "M34.943 10.5843L43.3842 25.2773",
+              "M47.7575 4.75525L52.9815 20.8836",
+              "M61.5101 1.73117L63.2768 18.6046",
+              "M75.5789 1.64352L73.823 18.517",
+              "M89.3641 4.50323L84.151 20.6316",
+            ][path.id]
+          }
+          stroke={tempRatio >= path.ratio ? "#545454" : path.color}
+          stroke-width="3"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      ))}
+    </g>
+    <defs>
+      <clipPath id="clip0_201_30">
+        <rect width="91" height="71" fill="white" />
+      </clipPath>
+    </defs>
     </svg>
-    <div class="min-temp">{Math.round(weatherInfo?.daily.temperature_2m_min[0])}℃</div>
+    <div>
+      <div class="max-temp">{Math.round(weatherInfo?.daily.temperature_2m_max[0])}℃</div>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="18"
+        viewBox="0 0 24 18"
+        fill="none"
+      >
+        <title>日照時間</title>
+        <path
+          opacity="0.9"
+          d="M0.509521 16.5392L23.2913 0.587219"
+          stroke="var(--meter-divider-color)"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+      <div class="min-temp">{Math.round(weatherInfo?.daily.temperature_2m_min[0])}℃</div>
+    </div>
   </div>
 </div>
-
 
 <style>
   .meter {

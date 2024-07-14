@@ -8,7 +8,78 @@ const currentWeather = WMO_WEATHER_CODES.find(
 ---
 
 <div class="weather-mark">
-  <img src={currentWeather?.image} alt="天気マーク">
+  {currentWeather?.description === "sunny" && (
+    <svg xmlns="http://www.w3.org/2000/svg" width="59" height="59" viewBox="0 0 59 59" fill="none">
+      <g opacity="0.9">
+        <path d="M29.1089 44.1547C37.262 44.1547 43.8715 37.5452 43.8715 29.3921C43.8715 21.2389 37.262 14.6295 29.1089 14.6295C20.9557 14.6295 14.3463 21.2389 14.3463 29.3921C14.3463 37.5452 20.9557 44.1547 29.1089 44.1547Z" stroke="var(--weather-mark-color)" stroke-width="2" stroke-miterlimit="10"/>
+        <path d="M29.1089 7.85101V1.2832" stroke="var(--weather-mark-color)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M18.3384 10.737L15.0544 5.04907" stroke="var(--weather-mark-color)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M10.4538 18.6216L4.76587 15.3376" stroke="var(--weather-mark-color)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M7.56781 29.3921H1" stroke="var(--weather-mark-color)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M10.4538 40.1627L4.76587 43.4466" stroke="var(--weather-mark-color)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M18.3384 48.0472L15.0544 53.7351" stroke="var(--weather-mark-color)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M29.1089 50.9332V57.501" stroke="var(--weather-mark-color)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M39.8794 48.0472L43.1633 53.7351" stroke="var(--weather-mark-color)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M47.764 40.1627L53.4519 43.4466" stroke="var(--weather-mark-color)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M50.65 29.3921H57.2178" stroke="var(--weather-mark-color)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M47.764 18.6216L53.4519 15.3376" stroke="var(--weather-mark-color)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M39.8794 10.737L43.1633 5.04907" stroke="var(--weather-mark-color)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </g>
+    </svg>
+  )}
+  {currentWeather?.description === "cloudy" && (
+    <svg xmlns="http://www.w3.org/2000/svg" width="77" height="45" viewBox="0 0 77 45" fill="none">
+      <path opacity="0.9" d="M76 27.919C76 36.4059 67.6047 43.2832 57.25 43.2832H19.75C9.39528 43.2832 1 36.4059 1 27.919C1 19.4322 9.39528 12.5495 19.75 12.5495H19.7606C23.0848 5.84692 29.6534 1.2832 37.215 1.2832C44.8296 1.2832 51.4407 5.91045 54.7436 12.6872C55.5614 12.5972 56.4004 12.5495 57.25 12.5495C67.6047 12.5495 76 19.4322 76 27.919Z" stroke="var(--weather-mark-color)" stroke-width="2" stroke-miterlimit="10"/>
+    </svg>
+  )}
+  {currentWeather?.description === "rainy" && (
+    <svg width="78" height="46" viewBox="0 0 78 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g id="Group 3">
+    <path id="Vector" opacity="0.9" d="M76.3537 28.7647C76.3537 37.3287 67.9197 44.2686 57.5173 44.2686H19.8444C9.44189 44.2686 1.0079 37.3287 1.0079 28.7647C1.0079 20.2007 9.44189 13.2555 19.8444 13.2555H19.855C23.1945 6.49194 29.7934 1.88672 37.3899 1.88672C45.0397 1.88672 51.6812 6.55604 54.9994 13.3944C55.8209 13.3036 56.6638 13.2555 57.5173 13.2555C67.9197 13.2555 76.3537 20.2007 76.3537 28.7647Z" stroke="var(--weather-mark-color)" stroke-width="2" stroke-miterlimit="10"/>
+    <path id="Vector_2" d="M25.9336 25.1328L29.2001 16.2303" stroke="var(--weather-mark-color)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <path id="Vector_3" d="M33.6558 29.925L38.6808 16.2303" stroke="var(--weather-mark-color)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <path id="Vector_4" d="M44.8949 25.1328L48.1614 16.2303" stroke="var(--weather-mark-color)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+    </svg>
+  )}
+  {currentWeather?.description === "fog" && (
+    <svg width="78" height="57" viewBox="0 0 78 57" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g id="Group 141">
+    <path id="Vector" opacity="0.9" d="M1 27.4953C1 19.0497 9.32554 12.2068 19.5959 12.2068H19.6079C22.9033 5.53793 29.4221 1 36.9193 1C44.4164 1 51.0313 5.60396 54.3026 12.3448C55.113 12.2548 55.9473 12.2068 56.7877 12.2068C67.0581 12.2068 75.3836 19.0557 75.3836 27.4953" stroke="var(--weather-mark-color)" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"/>
+    <path id="Vector_2" d="M1 34.6623H26.7809" stroke="var(--weather-mark-color)" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"/>
+    <path id="Vector_3" d="M1 41.6649H11.0483" stroke="var(--weather-mark-color)" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"/>
+    <path id="Vector_4" d="M33.912 34.6623H62.4361" stroke="var(--weather-mark-color)" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"/>
+    <path id="Vector_5" d="M10.1839 55.6699H35.9648" stroke="var(--weather-mark-color)" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"/>
+    <path id="Vector_6" d="M43.0959 55.6699H71.626" stroke="var(--weather-mark-color)" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"/>
+    <path id="Vector_7" d="M17.6511 41.6649H56.4335" stroke="var(--weather-mark-color)" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"/>
+    <path id="Vector_8" d="M66.3017 48.6674H76.35" stroke="var(--weather-mark-color)" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"/>
+    <path id="Vector_9" d="M21.5107 48.6674H60.2992" stroke="var(--weather-mark-color)" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"/>
+    </g>
+    </svg>
+  )}
+  {currentWeather?.description === "snow" && (
+    <svg width="48" height="55" viewBox="0 0 48 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g id="Group 2">
+    <path id="Vector" d="M23.7787 53.4677V1.2832" stroke="var(--weather-mark-color)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <path id="Vector_2" d="M1 40.2969L46.1263 14.2047" stroke="var(--weather-mark-color)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <path id="Vector_3" d="M1 13.9555L46.1263 40.0477" stroke="var(--weather-mark-color)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <path id="Vector_4" opacity="0.9" d="M16.926 7.20197L23.5632 15.6751L30.2004 7.20197" stroke="var(--weather-mark-color)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <path id="Vector_5" opacity="0.9" d="M37.5818 11.2207L33.5732 21.2138L44.219 22.7337" stroke="var(--weather-mark-color)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <path id="Vector_6" opacity="0.9" d="M44.4345 31.145L33.7888 32.6649L37.7973 42.6579" stroke="var(--weather-mark-color)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <path id="Vector_7" opacity="0.9" d="M30.6314 47.0505L23.9942 38.5773L17.357 47.0505" stroke="var(--weather-mark-color)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <path id="Vector_8" opacity="0.9" d="M9.97559 43.0318L13.9841 33.0387L3.33838 31.5188" stroke="var(--weather-mark-color)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <path id="Vector_9" opacity="0.9" d="M3.12289 23.1074L13.7686 21.5875L9.76007 11.5945" stroke="var(--weather-mark-color)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+    </svg>
+  )}
+  {currentWeather?.description === "thunderstorm" && (
+    <svg width="78" height="62" viewBox="0 0 78 62" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g id="Group" opacity="0.9">
+    <path id="Vector" opacity="0.9" d="M35.1959 44.3444H20.4952C10.0928 44.3444 1.66029 37.4033 1.66029 28.8426C1.66029 20.2758 10.0928 13.3347 20.4952 13.3347H20.5074C23.8451 6.57012 30.4416 1.96094 38.0412 1.96094C45.6895 1.96094 52.3286 6.63099 55.6481 13.4687C56.4688 13.3833 57.314 13.3347 58.1651 13.3347C68.5675 13.3347 77 20.2758 77 28.8426C77 37.4033 68.5675 44.3444 58.1651 44.3444H42.5098" stroke="var(--weather-mark-color)" stroke-width="2" stroke-miterlimit="10"/>
+    <path id="Vector_2" d="M49.6176 35.474L43.9209 42.2203L29.8449 60.3101L36.607 42.2203L38.048 38.3722H27.8462L35.2756 23.1526H46.2069L42.322 35.0478L49.6176 35.474Z" stroke="var(--weather-mark-color)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+    </svg>
+  )}
   <p>{currentWeather?.description}</p>
 </div>
 

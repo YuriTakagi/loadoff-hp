@@ -2,17 +2,39 @@
 export const prerender = false;
 
 import Layout from "../layouts/Layout.astro";
-import Sunny04Component from "../components/Sunny04";
+import FallingBoxes from "../components/FallingBoxes";
 import WeatherWrapper from "../components/WeatherWrapper.astro";
 import { getWeather } from "@api/getWeather";
+import { WMO_WEATHER_CODES } from "@constants/wmo-weather-codes";
 
-const weatherInfo = await getWeather();
-console.log("weather data fetched");
+const result = await getWeather();
+const weatherInfo = result?.data;
+const theme = result?.theme;
+const weatherDescription = WMO_WEATHER_CODES.find(
+  (item) => item.code === weatherInfo?.current_weather.weathercode,
+)?.description;
 ---
 
-<Layout title="株式会社loadoff">
-  <main>
-    <Sunny04Component client:only="react"/>
-    <WeatherWrapper weatherInfo={weatherInfo}/>
+<Layout title="株式会社loadoff" theme={theme}>
+  <main class="main">
+    <FallingBoxes client:only="react" theme={theme} weatherDescription={weatherDescription}/>
+    <div class="weather-wrapper">
+      <WeatherWrapper weatherInfo={weatherInfo} />
+    </div>
   </main>
 </Layout>
+
+
+<style>
+.main {
+  position: relative;
+}
+.weather-wrapper {
+  position: absolute;
+  z-index: 20;
+  top: 0;
+  height: calc(100% - 193px);
+  width: 100%;
+  /* left: 0; */
+}
+</style>

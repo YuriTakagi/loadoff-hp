@@ -35,15 +35,34 @@ const { weatherInfo } = Astro.props;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(10, 1fr);
+    height: 100%;
     /* grid-column-gap: 0px; */
     /* grid-row-gap: 0px; */
   }
   .current-time {
     grid-area: 2 / 1 / 4 / 3;
   }
-  .location { grid-area: 4 / 1 / 6 / 3; }
-  .box-title { grid-area: 4 / 5 / 6 / 7; }
-  .temperature-meter { grid-area: 6 / 1 / 8 / 2; }
-  .weather-mark { grid-area: 6 / 2 / 8 / 3; }
+  .location {
+    grid-area: 4 / 1 / 6 / 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+  }
+  .box-title {
+    grid-area: 4 / 5 / 6 / 7;
+    padding-right: 3.5rem;
+  }
+  .temperature-meter {
+    grid-area: 6 / 1 / 8 / 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .weather-mark {
+    grid-area: 6 / 2 / 8 / 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   .sunshine-graph {grid-area: 8 / 1 / 10 / 4;}
 </style>

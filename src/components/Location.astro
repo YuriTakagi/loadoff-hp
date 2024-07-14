@@ -1,15 +1,25 @@
 <div class="location">
-  <img src="/location.svg" alt="位置マーク" />
-  <p>Soshigaya-okura, Tokyo, JPN</p>
+  <svg xmlns="http://www.w3.org/2000/svg" width="19" height="28" viewBox="0 0 19 28" fill="none">
+    <g clip-path="url(#clip0_1_68)">
+      <path opacity="0.9" d="M16.2174 2.78506C12.5075 -0.928332 6.49254 -0.928348 2.78265 2.78504C-0.236392 5.80694 -0.870425 10.4737 1.2328 14.1928L9.5 28L17.7672 14.1928C19.8704 10.4737 19.2364 5.80696 16.2174 2.78506ZM9.5 12.9003C7.41458 12.9003 5.72402 11.2081 5.72402 9.1207C5.72402 7.0333 7.41458 5.34114 9.5 5.34114C11.5854 5.34114 13.276 7.0333 13.276 9.1207C13.276 11.2081 11.5854 12.9003 9.5 12.9003Z" fill="var(--location-outer-color)"/>
+    </g>
+    <defs>
+      <clipPath id="clip0_1_68">
+        <rect width="19" height="28" fill="white"/>
+      </clipPath>
+    </defs>
+  </svg>
+  <p class="text">Soshigaya-okura, Tokyo, JPN</p>
 </div>
 
 <style>
   .location {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 1rem;
   }
-  p {
-  font-size: 1rem;
+  .text {
+    font-size: 1rem;
   }
 </style>

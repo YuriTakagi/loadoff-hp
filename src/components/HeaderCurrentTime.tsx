@@ -1,4 +1,4 @@
-import styles from "@components/HeaderCurrentTime.module.css"
+import styles from "@components/HeaderCurrentTime.module.css";
 import useCurrentTime from "@hooks/useCurrentTime";
 
 function formatTime(date: Date) {

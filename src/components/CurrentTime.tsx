@@ -32,7 +32,7 @@ const CurrentTime = () => {
 
   return (
     <div className={styles.clock}>
-      <p className={styles.time}>{formattedTime}</p>
+      <p className={styles.currentTime}>{formattedTime}</p>
       <p className={styles.date}>
         <span className={styles.today}>Today</span>
         {formattedFullDate}

@@ -1,6 +1,6 @@
 // TODO: 霧と雷と雪のカラーを追加する
 export const BOX_COLORS = {
-  Sunny: [
+  sunny: [
     "rgb(224, 217, 206)",
     "rgb(227, 190, 178)",
     "rgb(124, 150, 102)",
@@ -8,7 +8,7 @@ export const BOX_COLORS = {
     "rgb(229, 201, 111)",
     "rgb(221, 77, 49)",
   ],
-  Cloudy: [
+  cloudy: [
     "rgb(218, 219, 222)",
     "rgb(163, 158, 162)",
     "rgb(103, 116, 120)",
@@ -16,7 +16,7 @@ export const BOX_COLORS = {
     "rgb(87, 85, 84)",
     "rgb(65, 61, 60)",
   ],
-  Rainy: [
+  rainy: [
     "rgb(88, 137, 192)",
     "rgb(134, 172, 207)",
     "rgb(6, 61, 118)",
@@ -34,4 +34,3 @@ export const BOX_COLORS = {
 //   "rgb(169, 194, 192)",
 //   "rgb(231, 227, 228)",
 // ];
-

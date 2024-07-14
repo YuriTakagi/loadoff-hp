@@ -1,0 +1,9 @@
+.canvasDiv {
+  /* height: calc(100vh - 193px); */
+  height: 100vh;
+  margin: 0 auto;
+}
+
+.canvasContainer {
+  height: 100%;
+}

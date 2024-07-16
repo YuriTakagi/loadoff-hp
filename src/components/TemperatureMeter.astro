@@ -113,4 +113,23 @@ function calculateTemperatureRatio(
   .max-temp, .min-temp {
     font-size: 1.25rem;
   }
+
+  @media (max-width: 1100px) {
+    #meter-svg {
+      width: 63px;
+      height: 48px;
+    }
+    .current-temperature {
+      position: absolute;
+      padding-top: 1.5rem;
+      padding-left: 1.5rem;
+      font-size: 1.25rem;
+    }
+    .wrapper {
+      gap: 0.5rem;
+    }
+    .max-temp, .min-temp {
+      font-size: 0.75rem;
+    }
+  }
 </style>

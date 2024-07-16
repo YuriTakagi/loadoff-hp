@@ -128,7 +128,7 @@ type SunnyProps = {
 const SunnyBox = ({ theme, weatherDescription }: SunnyProps) => {
   const number = 150;
   const size = 0.2;
-  const canvasColor = theme === "day" ? "rgb(239, 239, 239)" : "#112028";
+  const canvasColor = theme === "day" ? "#EFEFEF" : "#112028";
   const COLORS = useMemo(() => {
     if (weatherDescription) {
       if (weatherDescription === "sunny") {
@@ -140,15 +140,23 @@ const SunnyBox = ({ theme, weatherDescription }: SunnyProps) => {
       if (weatherDescription === "rainy") {
         return BOX_COLORS.rainy;
       }
+      if (weatherDescription === "fog") {
+        return BOX_COLORS.cloudy;
+      }
+      if (weatherDescription === "snow") {
+        return BOX_COLORS.rainy;
+      }
+      if (weatherDescription === "thunderstorm") {
+        return BOX_COLORS.rainy;
+      }
     }
-    return BOX_COLORS.cloudy;
   }, [weatherDescription]);
 
   const colors = useMemo(() => {
     const array = new Float32Array(number * 3);
     const color = new Color();
     for (let i = 0; i < number; i++) {
-      color.set(COLORS[Math.floor(Math.random() * 6)]).toArray(array, i * 3);
+      color.set(COLORS![Math.floor(Math.random() * 6)]).toArray(array, i * 3);
     }
     return array;
   }, []);

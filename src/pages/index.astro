@@ -26,15 +26,23 @@ const weatherDescription = WMO_WEATHER_CODES.find(
 
 
 <style>
-.main {
-  position: relative;
-}
-.weather-wrapper {
-  position: absolute;
-  z-index: 20;
-  top: 0;
-  height: calc(100% - 193px);
-  width: 100%;
-  /* left: 0; */
-}
+  .main {
+    position: relative;
+  }
+  .weather-wrapper {
+    position: absolute;
+    z-index: 20;
+    top: 0;
+    top: 193px;
+    left: 0;
+    height: calc(100% - 193px);
+    width: 100%;
+  }
+
+  @media (max-width: 1100px) {
+    .weather-wrapper {
+      height: calc(100% - 90px);
+      top: 90px;
+    }
+  }
 </style>

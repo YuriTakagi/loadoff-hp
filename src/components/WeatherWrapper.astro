@@ -33,36 +33,77 @@ const { weatherInfo } = Astro.props;
 <style>
   .weather-info {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(10, 1fr);
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(5, 1fr);
     height: 100%;
+    padding-left: 3.75rem;
+    padding-right: 3.75rem;
     /* grid-column-gap: 0px; */
     /* grid-row-gap: 0px; */
   }
   .current-time {
-    grid-area: 2 / 1 / 4 / 3;
+    grid-area: 1 / 1 / 2 / 5;
   }
   .location {
-    grid-area: 4 / 1 / 6 / 3;
+    grid-area: 2 / 1 / 3 / 5;
     display: flex;
     flex-direction: column;
     justify-content: end;
   }
   .box-title {
-    grid-area: 4 / 5 / 6 / 7;
-    padding-right: 3.5rem;
+    grid-area: 2 / 9 / 3 / 13;
   }
   .temperature-meter {
-    grid-area: 6 / 1 / 8 / 2;
+    grid-area: 3 / 1 / 4 / 3;
     display: flex;
     justify-content: center;
     align-items: center;
   }
   .weather-mark {
-    grid-area: 6 / 2 / 8 / 3;
+    grid-area: 3 / 3 / 4 / 5;
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  .sunshine-graph {grid-area: 8 / 1 / 10 / 4;}
+  .sunshine-graph {
+    grid-area: 4 / 1 / 6 / 6;
+  }
+
+  @media (max-width: 1100px) {
+    .weather-info {
+      padding-left: 1.25rem;
+      padding-right: 1.25rem;
+    }
+    .current-time {
+    grid-area: 1 / 1 / 2 / 7;
+  }
+    .location {
+      grid-area: 2 / 1 / 3 / 10;
+      display: flex;
+      flex-direction: column;
+      justify-content: end;
+    }
+    .box-title {
+      grid-area: 5 / 1 / 6 / 13;
+    }
+    .temperature-meter {
+      grid-area: 3 / 1 / 4 / 4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .weather-mark {
+      grid-area: 4 / 1 / 5 / 4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .sunshine-graph {
+      grid-area: 4 / 4 / 5 / 13;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      /* justify-content: end; */
+    }
+  }
 </style>

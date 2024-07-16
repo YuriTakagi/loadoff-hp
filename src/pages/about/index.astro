@@ -7,10 +7,13 @@ const theme = result?.theme;
 ---
 
 <Layout title="about | 株式会社loadoff" theme={theme}>
-  <h1>about</h1>
+  <!-- <h1>about</h1> -->
   <!-- sidebar -->
   <main>
-    <section id="corporate-philosophy">
+    <section class="prepare">
+      <h1>coming soon ...</h1>
+    </section>
+    <!-- <section id="corporate-philosophy">
       <div>
         <h2 id="core-value">core value</h2>
         <div>
@@ -130,11 +133,23 @@ const theme = result?.theme;
             城南信用金庫</p>
         </div>
       </div>
-    </section>
+    </section> -->
   </main>
 </Layout>
 
 <style>
+  main {
+    margin-top: 193px;
+  }
+  .prepare {
+    height: calc(100vh - 193px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  h1 {
+    font-size: 4rem;
+  }
   #core-value {
     opacity: 0;
   }
